@@ -1,0 +1,132 @@
+<div class="row">
+  <div class="col-md-12">
+      <!--   Kitchen Sink -->
+      <div class="panel panel-default">
+          <div class="panel-heading">
+              <div align="center">
+                  <b>DATA BARANG</b>
+              </div>
+          </div>
+          
+          
+           <!-- table -->
+         </div>
+          <a style="margin-left: 10px;" id="modal-195230" href="" role="button" class="btn btn-primary"
+              data-target="#modal-container-195230" data-toggle="modal" ng-click = "GetBarang()"><i class="glyphicon glyphicon-plus"></i> TAMBAH </a>
+          <div class="panel-body">
+
+              <div class="table-responsive">
+                  <table class="table table-striped table-bordered table-hover">
+                      <tdead>
+                          <tr>
+                              <td align="center"><b>No</b></td>
+                              <td align="center"><b>No DO</b></td>
+                              <td align="center"><b>ISI</b></td>
+                              <td align="center"><b>PCS</b></td>
+                              <td align="center"><b>BERAT</b></td>
+                              <td align="center"><b>VOLUME</b></td>
+                              <td align="center"><b>KETERANGAN</b></td>
+                              <td align="center" colspan="2"><b>Action</b></td>
+                          </tr>
+                      </tdead>
+                      <tbody>
+                          <tr ng-repeat="item in DatasBarang">
+                              <td align="center">{{$index+1}}</td>
+                              <td align="center">{{item.NoDo}}</td>
+                              <td align="center">{{item.isi}}</td>
+                              <td align="center">{{item.Pcs}}</td>
+                              <td align="center">{{item.Berat}}</td>
+                              <td align="center">{{item.Volume}}</td>
+                              <td align="center">{{item.Keterangan}}</td>
+                              <td align="center"><button class="btn btn-info" id="modal-195230" data-target="#modal-container-195230" data-toggle="modal" ng-click="GetData(item)"><i class="glyphicon glyphicon-edit"></i> Ubah</button></td>
+                              <td align="center"><button class="btn btn-Dark"  ng-click ="Hapus(item)"><i class="glyphicon glyphicon-trash"></i>Hapus</button></td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+      </div>
+      <!-- End  Kitchen Sink -->
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-md-12">
+
+
+          <div class="modal fade" id="modal-container-195230" role="dialog" aria-labelledby="myModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="myModalLabel">
+                              MASUKAN DATA    
+                          </h5>
+                          <button type="button" class="close" data-dismiss="modal">
+                              <span aria-hidden="true">×</span>
+                          </button>
+                      </div>
+                      <div class="modal-body">
+                          <form role="form">
+                              
+                              
+                              <div class="form-group">
+
+                                  <label for="barang">
+                                      ISI BARANG
+                                  </label>
+                                  <input type="text" class="form-control" id="barang" ng-model="input.isi" />
+                              </div>
+                              <div class="form-group">
+
+                                  <label for="barang">
+                                      PCS
+                                  </label>
+                                  
+                                  <input type="text" class="form-control" id="barang" ng-model="input.Pcs" />      
+                              </div>
+                              <div class="form-group">
+
+                                <label for="barang">
+                                    BERAT BARANG
+                                </label>
+                                
+                                <input type="text" class="form-control" id="barang" ng-model="input.Berat" />      
+                            </div>
+                            <div class="form-group">
+
+                              <label for="barang">
+                                  VOLUME
+                              </label>
+                              
+                              <input type="text" class="form-control" id="barang" ng-model="input.Volume" />      
+                          </div>
+
+                          <div class="form-group">
+
+                            <label for="barang">
+                                KETERANGAN
+                            </label>
+                            
+                            <input type="text" class="form-control" id="barang" ng-model="input.Keterangan" />      
+                        </div>
+                                           
+
+                      </div>
+                      <div class="modal-footer">
+
+                          <button type="button" class="btn btn-primary" ng-click = "Simpan()">
+                              Save <i class="glyphicon glyphicon-floppy-save"></i></button>
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                              Close
+                              <i class="glyphicon glyphicon-remove"></i></button>
+                      </div>
+                  </div>
+
+              </div>
+
+          </div>
+
+      </div>
+  </div>
+</div>

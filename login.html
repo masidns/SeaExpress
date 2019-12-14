@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyApp">
+  <head>
+    <title>SeaExpress</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- jQuery UI -->
+	<link rel="stylesheet" href="js1/jquery-ui.css">
+	<!-- Bootstrap -->
+	<link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<!-- styles -->
+	<link href="assets/css/styles.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="js1/font-awesome.css">
+	<script src="angularjs/angular.min.js"></script>
+	<script src="angularjs/angular.js"></script>
+	<script src="angularjs/angular-animate.js"></script>
+	<script src="angularjs/node_modules/@uirouter/angularjs/release/angular-ui-router.js"></script>
+	<script src="views/Apps.js"></script>
+	<script src="views/Controller.js"></script>
+	<script src="views/Controller/Pengirim.js"></script>
+	<script src="views/Controller/Penerima.js"></script>	     
+	<script src="views/Controller/Barang.js"></script>
+	<script src="views/Controller/Transaksi.js"></script>
+	<script src="views/Controller/Pembayaran.js"></script>
+	<script src="views/Controller/Home.js"></script>
+	<script src="views/Controller/Login.js"></script>
+	<link href="assets/vendors/form-helpers/css/bootstrap-formhelpers.min.css" rel="stylesheet">
+    <link href="assets/vendors/select/bootstrap-select.min.css" rel="stylesheet">
+    <link href="assets/vendors/tags/css/bootstrap-tags.css" rel="stylesheet">
+	<link rel="shortcut icon" href="assets/images/b.ico">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body class="" ng-controller="UsersController">
+  	<div class="header">
+	     <div class="container">
+	        <div class="row">
+	           <div class="col-md-12">
+	              <!-- Logo -->
+	              <div class="logo">
+	                 <h1><a href="index.html">SeaExpress</a></h1>
+	              </div>
+	           </div>
+	        </div>
+	     </div>
+	</div>
+
+	<div class="page-content container">
+		<div class="row">
+			<div class="col-md-4 col-md-offset-4">
+				<div class="login-wrapper">
+			        <div class="box">
+			            <div class="content-wrap">
+			                <h6>Sign In</h6>
+			                
+							<input class="form-control form-control-users" type="username" placeholder="Usersname" id="username"
+							ng-model="input.username"></br>
+			                <input class="form-control form-control-psw" type="password" placeholder="Password" id="psw"
+							ng-model="input.psw">
+			                <button type="submit" class="btn btn-primary" ng-click="Login()">
+								Login
+							</button>                
+			            </div>
+			        </div>
+
+			        <div class="already">
+			            <p>Don't have an account yet?</p>
+			            <a href="signup.html">Sign Up</a>
+			        </div>
+			    </div>
+			</div>
+		</div>
+	</div>
+
+
+
+   	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="js1/jquery.js"></script>
+	<!-- jQuery UI -->
+    <script src="js1/jquery-ui.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="assets/vendors/form-helpers/js/bootstrap-formhelpers.min.js"></script>
+
+    <script src="assets/vendors/select/bootstrap-select.min.js"></script>
+
+    <script src="assets/vendors/tags/js/bootstrap-tags.min.js"></script>
+
+    <script src="assets/vendors/mask/jquery.maskedinput.min.js"></script>
+
+    <script src="assets/vendors/moment/moment.min.js"></script>
+
+    <script src="assets/vendors/wizard/jquery.bootstrap.wizard.min.js"></script>
+<!-- bootstrap-datetimepicker -->
+<link href="assets/vendors/bootstrap-datetimepicker/datetimepicker.css" rel="stylesheet">
+<script src="assets/vendors/bootstrap-datetimepicker/bootstrap-datetimepicker.js"></script> 
+	<link rel="stylesheet" href="js1/bootstrap-editable.css">
+	<script src="js1/bootstrap-editable.min.js"></script>
+	
+	<script src="assets/js/custom.js"></script>
+    <script src="assets/js/forms.js"></script>
+  </body>
+</html>

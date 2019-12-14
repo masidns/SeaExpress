@@ -1,0 +1,136 @@
+<div class="row">
+    <div class="col-md-12">
+        <!--   Kitchen Sink -->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div align="center">
+                    <b>DATA USERS</b>
+                </div>
+            </div>
+            
+            
+             <!-- table -->
+           </div>
+            <a style="margin-left: 10px;" id="modal-195230" href="" role="button" class="btn btn-primary"
+                data-target="#modal-container-195230" data-toggle="modal" ng-click = "GetUsers()"><i class="glyphicon glyphicon-plus"></i> MAU TAMBAH?</a>
+            <div class="panel-body">
+  
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered table-hover">
+                        <tdead>
+                            <tr>
+                                <td align="center"><b>No</b></td>
+                                <td align="center"><b>ID</b></td>
+                                <td align="center"><b>NAMA PEGAWAI</b></td>
+                                <td align="center"><b>KONTAK</b></td>
+                                <td align="center"><b>EMAIL</b></td>
+                                <td align="center"><b>PASSWORD</b></td>
+                                <td align="center"><b>JABATAN</b></td>
+                                <td align="center" colspan="2"><b>Action</b></td>
+                            </tr>
+                        </tdead>
+                        <tbody>
+                            <tr ng-repeat="item in DatasUsers">
+                                <td align="center">{{$index+1}}</td>
+                                <td align="center">{{item.id}}</td>
+                                <td >{{item.NPG}}</td>
+                                <td >{{item.kontak}}</td>
+                                <td align="center">{{item.email}}</td>
+                                <td >{{item.psw}}</td>
+                                <td align="center">{{item.JB}}</td>
+                                <td align="center"><button class="btn btn-info" id="modal-195230" data-target="#modal-container-195230" data-toggle="modal" ng-click="GetData(item)"><i class="glyphicon glyphicon-edit"></i> Ubah</button></td>
+                                <td align="center"><button class="btn btn-Dark"  ng-click ="Hapus(item)"><i class="glyphicon glyphicon-trash"></i> Hapus</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- End  Kitchen Sink -->
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+  
+  
+            <div class="modal fade" id="modal-container-195230" role="dialog" aria-labelledby="myModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="myModalLabel">
+                                MASUKAN DATA    
+                            </h5>
+                            <button type="button" class="close" data-dismiss="modal">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form role="form">
+                                
+                                
+                                <div class="form-group">
+  
+                                    <label for="users">
+                                        Nama Users
+                                    </label>
+                                    <input type="text" class="form-control" id="users" ng-model="input.NPG" />
+                                </div>
+                                <div class="form-group">
+  
+                                    <label for="users">
+                                        Kontak
+                                    </label>
+                                    
+                                    <input type="text" class="form-control" id="users" ng-model="input.kontak" />      
+                                </div>
+                                <div class="form-group">
+  
+                                  <label for="users">
+                                      EMAIL
+                                  </label>
+                                  
+                                  <input type="email" class="form-control" id="users" ng-model="input.email" />      
+                              </div>
+                              <div class="form-group">
+  
+                                <label for="users">
+                                    PASSWORD
+                                </label>
+                                
+                                <input type="password" class="form-control" id="users" ng-model="input.psw" />      
+                            </div>
+  
+                            <div class="form-group">
+  
+                              <label for="users">
+                                  JABATAN
+                              </label>
+                              
+                              <input type="text" class="form-control" id="users" ng-model="input.JB" />      
+                          </div>
+  
+                          <div class="form-group">
+  
+                        </div>
+                        <div class="modal-footer">
+  
+                            <button type="button" class="btn btn-primary" ng-click = "Simpan()">
+                                Save 
+                                <i class="glyphicon glyphicon-floppy-save"></i>
+                            </button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                Close
+                                <i class="glyphicon glyphicon-remove"></i>
+                            </button>
+                        </div>
+                    </div>
+  
+                </div>
+  
+            </div>
+  
+        </div>
+    </div>
+  </div>

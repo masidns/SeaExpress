@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyApp">
+
+<head>
+	<title>SeaExpress</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- jQuery UI -->
+	<link rel="stylesheet" href="js1/jquery-ui.css">
+	<!-- Bootstrap -->
+	<link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<!-- styles -->
+	<link href="assets/css/styles.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="js1/font-awesome.css">
+	<script src="angularjs/angular.min.js"></script>
+	<script src="angularjs/angular.js"></script>
+	<script src="angularjs/angular-animate.js"></script>
+	<script src="angularjs/node_modules/@uirouter/angularjs/release/angular-ui-router.js"></script>
+	<!-- <script src="views/ControllerPenjualan.js"></script> -->
+	<link href="assets/vendors/form-helpers/css/bootstrap-formhelpers.min.css" rel="stylesheet">
+	<link href="assets/vendors/select/bootstrap-select.min.css" rel="stylesheet">
+	<link href="assets/vendors/tags/css/bootstrap-tags.css" rel="stylesheet">
+	<link rel="shortcut icon" href="assets/images/b.ico">
+	<script src="views/Controller/Pengirim.js"></script>
+	<script src="views/Controller/Penerima.js"></script>
+	<script src="views/Controller/Barang.js"></script>
+	<script src="views/Controller/Transaksi.js"></script>
+	<script src="views/Controller/Pembayaran.js"></script>
+	<script src="views/Controller/Home.js"></script>
+	<script src="views/Controller/Login.js"></script>
+	<script src="views/Apps.js"></script>
+	<script src="views/Controller.js"></script>
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+	<div class="header" ng-controller="views">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-5">
+					<!-- Logo -->
+					<div class="logo">
+						<h1><a href="index.html">SeaExpress</a></h1>
+					</div>
+				</div>
+				<!-- <div class="col-md-5">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="input-group form">
+								<input type="text" class="form-control" placeholder="Search...">
+								<span class="input-group-btn">
+									<button class="btn btn-primary" type="button">Search</button>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div> -->
+				<div class="col-md-7">
+					<div class="navbar navbar-inverse" role="banner">
+						<nav class="collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation">
+							<ul class="nav navbar-nav">
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">My Account <b
+											class="caret"></b></a>
+									<ul class="dropdown-menu animated fadeInUp">
+										<!-- <li><a href="pages/profile.html">Profile</a></li> -->
+										<li><a href="login.html">Logout</a></li>
+									</ul>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="page-content">
+		<div class="row">
+			<div class="col-md-2">
+				<div class="sidebar content-box" style="display: block;">
+					<ul class="nav">
+						<!-- Main menu -->
+						<li>
+							<a ui-sref="home" ui-opts="{reload:true}">
+								<i class="glyphicon glyphicon-home"></i>
+								HOME
+							</a>
+						</li>
+						<li class="submenu">
+							<a href="#">
+								<i class="glyphicon glyphicon-list"></i> INPUT DATA
+								<span class="caret pull-right"></span>
+							</a>
+							<!-- Sub menu -->
+							<ul>
+								<li><a ui-sref="pengirim" ui-opts="{reload:true}">
+										<i class="glyphicon glyphicon-list"></i>
+										Pengrim</a>
+								</li>
+
+								<li><a ui-sref="penerima" ui-opts="{reload:true}">
+										<i class="glyphicon glyphicon-list"></i>
+										Penerima</a>
+								</li>
+
+								<li><a ui-sref="barang" ui-opts="{reload:true}">
+										<i class="glyphicon glyphicon-list"></i>
+										Barang</a>
+								</li>
+
+								<li><a ui-sref="transaksi" ui-opts="{reload:true}">
+										<i class="glyphicon glyphicon-list"></i>
+										Transaksi</a>
+								</li>
+
+								<li><a ui-sref="pembayaran" ui-opts="{reload:true}">
+										<i class="glyphicon glyphicon-list"></i>
+										Pembayaran</a>
+								</li>
+							</ul>
+
+						</li>
+						<!-- <li><a ui-sref="users" ui-opts="{reload:true}">
+								<i class="glyphicon glyphicon-user"></i>
+								Users</a>
+						</li> -->
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-10">
+				<div class="row">
+					<div class="col-md-12">
+
+						<div class="content-box-large">
+							<ui-view>
+								<!-- <div class="row">
+								<div class="col-md-12 panel-warning">
+									<div class="content-box-large box-with-header">
+										<ui-view>
+
+										</ui-view>
+									</div>
+								</div>
+							</div> -->
+							</ui-view>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<div class="container">
+
+			<div class="copy text-center">
+				Copyright 2019 <a href='#'>Website</a>
+			</div>
+
+		</div>
+	</footer>
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="js1/jquery.js"></script>
+	<!-- jQuery UI -->
+	<script src="js1/jquery-ui.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+	<script src="assets/vendors/form-helpers/js/bootstrap-formhelpers.min.js"></script>
+
+	<script src="assets/vendors/select/bootstrap-select.min.js"></script>
+
+	<script src="assets/vendors/tags/js/bootstrap-tags.min.js"></script>
+
+	<script src="assets/vendors/mask/jquery.maskedinput.min.js"></script>
+
+	<script src="assets/vendors/moment/moment.min.js"></script>
+
+	<script src="assets/vendors/wizard/jquery.bootstrap.wizard.min.js"></script>
+	<!-- bootstrap-datetimepicker -->
+	<link href="assets/vendors/bootstrap-datetimepicker/datetimepicker.css" rel="stylesheet">
+	<script src="assets/vendors/bootstrap-datetimepicker/bootstrap-datetimepicker.js"></script>
+	<link rel="stylesheet" href="js1/bootstrap-editable.css">
+	<script src="js1/bootstrap-editable.min.js"></script>
+
+	<script src="assets/js/custom.js"></script>
+	<script src="assets/js/forms.js"></script>
+</body>
+
+</html>

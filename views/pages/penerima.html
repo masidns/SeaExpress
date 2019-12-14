@@ -1,0 +1,131 @@
+<div class="row">
+    <div class="col-md-12">
+        <!--   Kitchen Sink -->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div align="center">
+                    <b>DATA PENERIMA</b>
+                </div>
+            </div>
+            
+            
+             <!-- table -->
+           </div>
+            <a style="margin-left: 10px;" id="modal-195230" href="" role="button" class="btn btn-primary"
+                data-target="#modal-container-195230" data-toggle="modal" ng-click = "GetPengirim()"><i class="glyphicon glyphicon-plus"></i> TAMBAH </a>
+            <div class="panel-body">
+  
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered table-hover">
+                        <tdead>
+                            <tr>
+                                <td align="center"><b>No</b></td>
+                                <td align="center"><b>NAMA PENERIMA</b></td>
+                                <td align="center"><b>Alamat</b></td>
+                                <td align="center"><b>NO TELEPON</b></td>
+                                <td align="center"><b>STATUS</b></td>
+                                <td align="center"><b>TANGGAL DI TERIMA</b></td>
+                                <td align="center" colspan="2"><b>Action</b></td>
+                            </tr>
+                        </tdead>
+                        <tbody>
+                            <tr ng-repeat="item in DatasPenerima">
+                                <td align="center">{{$index+1}}</td>
+                                <td >{{item.Nama_Penerima}}</td>
+                                <td >{{item.Alamat}}</td>
+                                <td align="center">{{item.NoTlpn}}</td>
+                                <td >{{item.Status}}</td>
+                                <td align="center">{{item.TglTerima}}</td>
+                                <td align="center"><button class="btn btn-info" id="modal-195230" data-target="#modal-container-195230" data-toggle="modal" ng-click="GetData(item)"><i class="glyphicon glyphicon-edit"></i> Ubah</button></td>
+                                <td align="center"><button class="btn btn-Dark"  ng-click ="Hapus(item)"><i class="glyphicon glyphicon-trash"></i> Hapus</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- End  Kitchen Sink -->
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+  
+  
+            <div class="modal fade" id="modal-container-195230" role="dialog" aria-labelledby="myModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="myModalLabel">
+                                MASUKAN DATA    
+                            </h5>
+                            <button type="button" class="close" data-dismiss="modal">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form role="form">
+                                
+                                
+                                <div class="form-group">
+  
+                                    <label for="penerima">
+                                        Nama PENERIMA
+                                    </label>
+                                    <input type="text" class="form-control" id="penerima" ng-model="input.Nama_Penerima" />
+                                </div>
+                                <div class="form-group">
+  
+                                    <label for="penerima">
+                                        Alamat
+                                    </label>
+                                    
+                                    <input type="text" class="form-control" id="penerima" ng-model="input.Alamat" />      
+                                </div>
+                                <div class="form-group">
+  
+                                  <label for="penerima">
+                                      NO TELEPON
+                                  </label>
+                                  
+                                  <input type="text" class="form-control" id="penerima" ng-model="input.NoTlpn" />      
+                              </div>
+                              <div class="form-group">
+  
+                                <label for="penerima">
+                                    STATUS
+                                </label>
+                                
+                                <input type="text" class="form-control" id="penerima" ng-model="input.Status" />      
+                            </div>
+  
+                          <div class="form-group">
+  
+                            <label for="penerima">
+                                TANGGAL DI TERIMA
+                            </label>
+                            
+                            <input type="date" class="form-control" id="penerima" ng-model="input.TglTerima" />      
+                        </div>
+  
+                        
+  
+                        </div>
+                        <div class="modal-footer">
+  
+                            <button type="button" class="btn btn-primary" ng-click = "Simpan()"><i class="glyphicon glyphicon-save"></i>
+                                Save </button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="glyphicon glyphicon-remove"></i>
+                                Close
+                            </button>
+                        </div>
+                    </div>
+  
+                </div>
+  
+            </div>
+  
+        </div>
+    </div>
+  </div>
