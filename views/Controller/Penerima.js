@@ -8,7 +8,7 @@
             $scope.status = "Simpan";
             $http({
                 method: "get",
-                url: "http://localhost/cargo/CodeIgniter/penerima",
+                url: "http://localhost/seaexpress/CodeIgniter/penerima",
                 header: {
                     "Content-Type": "application/json"
                 }
@@ -22,7 +22,7 @@
                 if ($scope.status == "Simpan") {
                     $http({
                         method: "POST",
-                        url: "http://localhost/cargo/CodeIgniter/penerima",
+                        url: "http://localhost/seaexpress/CodeIgniter/penerima",
                         data: $scope.input,
                         header: {
                             "Content-Type": "application/json"
@@ -36,7 +36,7 @@
                 } else {
                     $http({
                         method: "PUT",
-                        url: "http://localhost/cargo/CodeIgniter/penerima",
+                        url: "http://localhost/seaexpress/CodeIgniter/penerima",
                         data: $scope.input,
                         header: {
                             "Content-Type": "application/json"
@@ -51,7 +51,7 @@
             $scope.Hapus = function (item) {
                 $http({
                     method: "DELETE",
-                    url: "http://localhost/cargo/CodeIgniter/penerima?idPenerima=" + item.idPenerima,
+                    url: "http://localhost/seaexpress/CodeIgniter/penerima?idPenerima=" + item.idPenerima,
                 }).then(function (response) {
                     var index = $scope.DatasPenerima.indexOf(item);
                     $scope.DatasPenerima.splice(index, 1);

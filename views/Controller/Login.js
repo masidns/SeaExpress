@@ -5,7 +5,7 @@
         .controller("UsersController", function ($scope, $http, $window) {
             $scope.input = {};
             $scope.Login = function () {
-                var Url = "http://localhost/cargo/CodeIgniter/users?username=" + $scope.input.username + "&psw=" + $scope.input.psw;
+                var Url = "http://localhost/seaexpress/CodeIgniter/users?username=" + $scope.input.username + "&psw=" + $scope.input.psw;
 
                 $http({
                     method: "get",
