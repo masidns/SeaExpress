@@ -16,7 +16,7 @@ class users_model extends CI_model
         return $message;
     }else{
         $message = [
-            "Status" => true
+            "Status" => false
         ];
         return $message;
     }

@@ -10,7 +10,7 @@
             $scope.status = "Simpan";
             $http({
                 method: "get",
-                url: "http://localhost/seaexpress/CodeIgniter/pembayaran",
+                url: "http://localhost/SeaExpress/CodeIgniter/pembayaran",
                 header: {
                     "Content-Type": "application/json"
                 }
@@ -22,7 +22,7 @@
             // get Transaksi
             $http({
                 method: "get",
-                url: "http://localhost/seaexpress/CodeIgniter/transaksi",
+                url: "http://localhost/SeaExpress/CodeIgniter/transaksi",
                 header: {
                     "Content-Type": "application/json"
                 }
@@ -40,7 +40,7 @@
                     $scope.input.NoStt = $scope.SelectedTransaksi.NoStt;
                     $http({
                         method: "POST",
-                        url: "http://localhost/seaexpress/CodeIgniter/pembayaran",
+                        url: "http://localhost/SeaExpress/CodeIgniter/pembayaran",
                         data: $scope.input,
                         header: {
                             "Content-Type": "application/json"
@@ -60,7 +60,7 @@
                     Data.via = $scope.input.via;
                     $http({
                         method: "PUT",
-                        url: "http://localhost/seaexpress/CodeIgniter/pembayaran",
+                        url: "http://localhost/SeaExpress/CodeIgniter/pembayaran",
                         data: Data,
                         header: {
                             "Content-Type": "application/json"
@@ -75,7 +75,7 @@
             $scope.Hapus = function (item) {
                 $http({
                     method: "DELETE",
-                    url: "http://localhost/seaexpress/CodeIgniter/pembayaran?idPembayaran=" + item.idPembayaran,
+                    url: "http://localhost/SeaExpress/CodeIgniter/pembayaran?idPembayaran=" + item.idPembayaran,
                 }).then(function (response) {
                     var index = $scope.DatasPembayaran.indexOf(item);
                     $scope.DatasPembayaran.splice(index, 1);

@@ -17,7 +17,7 @@
             // Get Transaksi
             $http({
                 method: "get",
-                url: "http://localhost/seaexpress/CodeIgniter/transaksi",
+                url: "http://localhost/SeaExpress/CodeIgniter/transaksi",
                 header: {
                     "Content-Type": "application/json"
                 }
@@ -29,7 +29,7 @@
             // Get PENGIRIM
             $http({
                 method: "get",
-                url: "http://localhost/seaexpress/CodeIgniter/pengirim",
+                url: "http://localhost/SeaExpress/CodeIgniter/pengirim",
                 header: {
                     "Content-Type": "application/json"
                 }
@@ -41,7 +41,7 @@
             // Get PENERIMA
             $http({
                 method: "get",
-                url: "http://localhost/seaexpress/CodeIgniter/penerima",
+                url: "http://localhost/SeaExpress/CodeIgniter/penerima",
                 header: {
                     "Content-Type": "application/json"
                 }
@@ -53,7 +53,7 @@
             // Get BARANG
             $http({
                 method: "get",
-                url: "http://localhost/seaexpress/CodeIgniter/barang",
+                url: "http://localhost/SeaExpress/CodeIgniter/barang",
                 header: {
                     "Content-Type": "application/json"
                 }
@@ -143,7 +143,7 @@
                     $scope.input.idPenerima = $scope.SelectedPenerima.idPenerima;
                     $http({
                         method: "POST",
-                        url: "http://localhost/seaexpress/CodeIgniter/transaksi",
+                        url: "http://localhost/SeaExpress/CodeIgniter/transaksi",
                         data: $scope.input,
                         header: {
                             "Content-Type": "application/json"
@@ -173,7 +173,7 @@
 
                     $http({
                         method: "PUT",
-                        url: "http://localhost/seaexpress/CodeIgniter/transaksi",
+                        url: "http://localhost/SeaExpress/CodeIgniter/transaksi",
                         data: Data,
                         header: {
                             "Content-Type": "application/json"
@@ -189,7 +189,7 @@
             $scope.Hapus = function (item) {
                 $http({
                     method: "DELETE",
-                    url: "http://localhost/seaexpress/CodeIgniter/transaksi?NoStt=" + item.NoStt,
+                    url: "http://localhost/SeaExpress/CodeIgniter/transaksi?NoStt=" + item.NoStt,
                 }).then(function (response) {
                     var index = $scope.DatasTransaksi.indexOf(item);
                     $scope.DatasTransaksi.splice(index, 1);
